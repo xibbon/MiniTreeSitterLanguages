@@ -24,7 +24,7 @@ let package = Package(
         .library(name: "TreeSitterMarkdownInlineRunestone", targets: ["TreeSitterMarkdownInlineRunestone"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/simonbs/Runestone", from: "0.4.1")
+        .package(url: "https://github.com/xibbon/Runestone", from: "0.4.1")
     ],
     targets: [
         .target(name: "TreeSitterLanguagesCommon"),

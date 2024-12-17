@@ -22,6 +22,9 @@ let package = Package(
         .library(name: "TreeSitterMarkdownInline", targets: ["TreeSitterMarkdownInline"]),
         .library(name: "TreeSitterMarkdownInlineQueries", targets: ["TreeSitterMarkdownInlineQueries"]),
         .library(name: "TreeSitterMarkdownInlineRunestone", targets: ["TreeSitterMarkdownInlineRunestone"]),
+        .library(name: "TreeSitterGLSLScript", targets: ["TreeSitterGLSL"]),
+        .library(name: "TreeSitterGLSLScriptQueries", targets: ["TreeSitterGLSLQueries"]),
+        .library(name: "TreeSitterGLSLScriptRunestone", targets: ["TreeSitterGLSLRunestone"]),
     ],
     dependencies: [
         .package(url: "https://github.com/xibbon/Runestone", from: "0.4.1")
@@ -43,5 +46,8 @@ let package = Package(
         .target(name: "TreeSitterMarkdownInline", cSettings: [.headerSearchPath("src")]),
         .target(name: "TreeSitterMarkdownInlineQueries", resources: [.copy("highlights.scm"), .copy("injections.scm")]),
         .target(name: "TreeSitterMarkdownInlineRunestone", dependencies: ["Runestone", "TreeSitterMarkdownInline", "TreeSitterMarkdownInlineQueries"]),
+        .target(name: "TreeSitterGLSL", cSettings: [.headerSearchPath("src")]),
+        .target(name: "TreeSitterGLSLQueries", resources: [.copy("highlights.scm")]),
+        .target(name: "TreeSitterGLSLRunestone", dependencies: ["Runestone", "TreeSitterGLSL", "TreeSitterGLSLQueries"]),
     ]
 )

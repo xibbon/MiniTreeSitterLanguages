@@ -22,9 +22,9 @@ let package = Package(
         .library(name: "TreeSitterMarkdownInline", targets: ["TreeSitterMarkdownInline"]),
         .library(name: "TreeSitterMarkdownInlineQueries", targets: ["TreeSitterMarkdownInlineQueries"]),
         .library(name: "TreeSitterMarkdownInlineRunestone", targets: ["TreeSitterMarkdownInlineRunestone"]),
-        .library(name: "TreeSitterGLSLScript", targets: ["TreeSitterGLSL"]),
-        .library(name: "TreeSitterGLSLScriptQueries", targets: ["TreeSitterGLSLQueries"]),
-        .library(name: "TreeSitterGLSLScriptRunestone", targets: ["TreeSitterGLSLRunestone"]),
+        .library(name: "TreeSitterGLSL", targets: ["TreeSitterGLSL"]),
+        .library(name: "TreeSitterGLSLQueries", targets: ["TreeSitterGLSLQueries"]),
+        .library(name: "TreeSitterGLSLRunestone", targets: ["TreeSitterGLSLRunestone"]),
     ],
     dependencies: [
         .package(url: "https://github.com/xibbon/Runestone", from: "0.4.1")
